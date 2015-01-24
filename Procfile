@@ -1,0 +1,1 @@
+web: gunicorn Festiv.wsgi --log-file -
