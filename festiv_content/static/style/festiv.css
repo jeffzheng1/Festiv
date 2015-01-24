@@ -1,0 +1,78 @@
+.playbutton{ 
+    margin-bottom: 25px;
+    opacity: .5;
+}
+
+.playbutton:hover { 
+    opacity: .75;
+}
+
+#menu-logo { 
+    font-family: 'Fauna One', serif;
+}
+
+.stage { 
+    color: #ffffff;
+}
+
+.stage:hover { 
+    color: #3366FF;
+    text-decoration: none;
+}
+
+#target { 
+    opacity: .8;
+}
+
+#frontpageSearchIcon { 
+    left: auto;
+    position: relative;
+}
+
+#frontpageSearchIcon:hover { 
+    opacity:0;
+}
+
+#frontpageSearch { 
+    position: absolute;
+    float:left;
+    left:37%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    height: 50px;
+}
+
+#frontpageSearch:hover { 
+    opacity:1;
+    transition: all 0.5s ease-in-out;
+}
+
+#festHead { 
+    color:#ffffff;
+}
+
+.festPics { 
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    /*background: url(http://link-to-your/image.jpg) no-repeat;*/
+    border: 1px solid white;
+}
+
+.slides { 
+    text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.carousel-inner { 
+    text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.noMargin { 
+    margin: 15px 0px 0px 0px !important;
+} 
+
+.playProfile { 
+    margin-right: 10px;
+}
