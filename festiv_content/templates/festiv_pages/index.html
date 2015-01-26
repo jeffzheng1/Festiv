@@ -106,9 +106,9 @@
                                     <h1 id="nowPlaying">Select A Stage To Play</h1>
                                 </li>
                             </ul>
-                            <div class="social-icons sicon-white"><a href="#" class="sicon-search" id="frontpageSearchIcon"><i>search</i></a>
+                            <div class="social-icons sicon-white"><a href="#" class="sicon-search" id="frontpageSearchIcon" ><i>search</i></a>
                             <form class="form-search" id="frontpageSearch" ONSUBMIT="if (this.submitted) {return true;} else {return false;}">
-                                <input class="input-xlarge" id="appendedInputButton" type="text" placeholder="Search Artist">
+                                <input class="input-xlarge inputBox" id="appendedInputButton" style="color:black" type="text" placeholder="Search Artist">
                                 <button class="btn btn-primary sicon-search sicon-white" type="button" id="frontpageButton"><i>Search</i></button>
                             </form>             
                             </div>
@@ -305,7 +305,7 @@
                     </div>
                 </div>
                 <!-- Sub menu -->
-                <nav class="submenu">
+                <!-- <nav class="submenu">
                     <ul>
                         <li>
                             <a href="./pages/blog/blog.html">World</a>
@@ -317,7 +317,7 @@
                             <a href="./pages/blog/blog.html">Europe</a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
             </header>
              <!-- End Header -->
              
@@ -331,78 +331,60 @@
                             <img class="festPics" src="{% static 'images/pages/festivals/coachella_pic.jpg' %}">
                         </a>
                         <h5>
-                            Coachella<br/>
+                            <a style="color:white" target="_blank" href="http://www.coachella.com/">Coachella</a><br/>
                             <small>April 11 - 13 & April 18 - 20</small>
                         </h5>
                         <p class="smallFontBy08">Coachella is a two-weekend, three-day music and arts festival held at the Empire Polo Club in Indio, California.</p>
-                        <div class="read-more">
-                            <a target="_blank" href="http://www.coachella.com/">Read More...</a>
-                        </div>
                     </li>
                     <li class="span4">
                         <a target="_blank" href="http://www.tomorrowland.com/global-sale/">
                             <img class="festPics" src="{% static 'images/pages/festivals/tomorrowland_pic.jpg' %}">
                         </a>
                         <h5>
-                            Tomorrowland<br/>
+                            <a style="color:white" target="_blank" href="http://www.tomorrowland.com/global-sale/">Tomorrowland</a><br/>
                             <small>July 18 - 20 & July 25 - 27</small>
                         </h5>
                         <p class="smallFontBy08">Tomorrowland is a large electronic music festival held in Belgium.</p>
-                        <div class="read-more">
-                            <a target="_blank" href="http://www.tomorrowland.com/global-sale/">Read More...</a>
-                        </div>
                     </li>
                     <li class="span4">
                         <a target="_blank" href="http://www.creamfields.com/">
                             <img class="festPics" src="{% static 'images/pages/festivals/creamsfield_pic.jpg' %}">
                         </a>
                         <h5>
-                            Creamsfields<br/>
+                             <a style="color:white" target="_blank" href="http://www.creamfields.com/">Creamsfields<br/>
                             <small>August 22 - 24</small>
                         </h5>
                         <p class="smallFontBy08">Creamfields is a large British dance music festival featuring DJs and live acts in Daresbury, England.</p>
-                        <div class="read-more">
-                            <a target="_blank" href="http://www.creamfields.com/">Read More...</a>
-                        </div>
                     </li>
                     <li class="span4">
                         <a target="_blank" href="http://stereosonic.com.au">
                             <img class="festPics" src="{% static 'images/pages/festivals/stereosonic_pic.jpg' %}">
                         </a>
                         <h5>
-                            Stereosonic<br/>
+                             <a style="color:white" target="_blank" href="http://stereosonic.com.au/">Stereosonic</a><br/>
                             <small>November 29 - 30 & December 5 -7</small>
                         </h5>
                         <p class="smallFontBy08">Stereosonic is an annual music festival held in Australia in November and early December. Stereosonic is held in Brisbane, Adelaide, Perth, Sydney, and Melbourne.</p>
-                        <div class="read-more">
-                            <a target="_blank" href="http://stereosonic.com.au/">Read More...</a>
-                        </div>
                     </li>
                     <li class="span4">
                         <a target="_blank" href="http://www.ultramusicfestival.com/home">
                             <img class="festPics" src="{% static 'images/pages/festivals/ultra_pic.jpg' %}">
                         </a>
                         <h5>
-                            Ultra Music Festival Miami<br/>
+                            <a style="color:white" target="_blank" style="white" href="http://www.ultramusicfestival.com/home">Ultra Music Festival Miami</a><br/>
                             <small>March 28 - 31</small>
                         </h5>
                         <p class="smallFontBy08">Ultra Music Festival (UMF) is an annual outdoor electronic music festival that occurs in March in the city of Miami, Florida, United States.</p>
-                        <div class="read-more">
-                            <a href="http://www.ultramusicfestival.com/home">Read More...</a>
-                        </div>
                     </li>
                     <li class="span4">
                         <a target="_blank" href="http://www.electricdaisycarnival.com/">
                             <img class="festPics" src="{% static 'images/pages/festivals/edc_pic.jpg' %}">
                         </a>
                         <h5>
-                            EDC Las Vegas<br/>
+                            <a target="_blank" style="color:white" href="http://www.electricdaisycarnival.com/">EDC Las Vegas</a><br/>
                             <small>June 20 - 22</small>
                         </h5>
                         <p class="smallFontBy08">Electric Daisy Carnival in Las Vegas is the world's largest electronic music festival.</p>
-                        <div class="read-more">
-                            <a href="http://www.electricdaisycarnival.com/">Read More...</a>
-                        </div>
                     </li>
                 </ul>
             </article>

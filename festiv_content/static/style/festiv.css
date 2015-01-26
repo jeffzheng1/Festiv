@@ -58,7 +58,7 @@
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
     /*background: url(http://link-to-your/image.jpg) no-repeat;*/
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 .slides { 
@@ -75,4 +75,8 @@
 
 .playProfile { 
     margin-right: 10px;
+}
+.inputBox { 
+    border-radius: 25px !important;
+   
 }
