@@ -50,6 +50,7 @@ function myEmbed(url) {
     getJSONP(query, function(data){
         $("iFrame").remove();
         $('#target').append(data.html);
+        $("iFrame").addClass("embed-responsive-item");
     });  
 }
 
