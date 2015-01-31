@@ -46,11 +46,13 @@ function getJSONP(url, success) {
 }
 
 function myEmbed(url) { 
-    var query = "https://soundcloud.com/oembed?url=" + url + "&format=js&callback=?&maxheight=200&maxwidth=600&auto_play=true";
+    var query = "https://soundcloud.com/oembed?url=" + url + "&format=js&callback=?&maxheight=500&maxwidth=600&auto_play=true";
     getJSONP(query, function(data){
         $("iFrame").remove();
         $('#target').append(data.html);
         $("iFrame").addClass("embed-responsive-item");
+        $("iFrame").attr("width", "60%");
+        $("iFrame").attr("height", "50%");
     });  
 }
 
