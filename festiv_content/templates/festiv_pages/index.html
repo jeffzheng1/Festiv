@@ -81,7 +81,7 @@
         <div class="overlay"></div> -->
         <!-- Centralized content -->
         <div class="centralized">
-            <div class="container">
+            <div class="container" style="height: 100%;">
                 <div class="row-fluid">
                     <div class="span12 center">
                         <!-- Animated logo -->
@@ -106,12 +106,7 @@
                                     <h1 id="nowPlaying">Select A Stage To Play</h1>
                                 </li>
                             </ul>
-                            <div class="social-icons sicon-white"><a href="#" class="sicon-search" id="frontpageSearchIcon" ><i>search</i></a>
-                            <form class="form-search" id="frontpageSearch" ONSUBMIT="if (this.submitted) {return true;} else {return false;}">
-                                <input class="input-xlarge inputBox" id="appendedInputButton" style="color:black" type="text" placeholder="Search Artist">
-                                <button class="btn btn-primary sicon-search sicon-white" type="button" id="frontpageButton"><i>Search</i></button>
-                            </form>             
-                            </div>
+                            
                         </div>
                         <div id="myCarousel" class="carousel slide">
                             <!-- Carousel items -->
@@ -129,11 +124,22 @@
                         <!-- 
                         <a href="#"><img class="playbutton" src="assets/images/pages/welcome/play.png" width="200" height="200">
                         </a> -->
-                        <div id="target"></div>
+                        <div class="col-md-12">
+                            <div id="target" class="embed-responsive embed-responsive-16by9"></div>
+                        </div>
                     </div>
                 </div>
-
             </div>
+        </div>
+    </div>
+    <div class="row text-center" style="position:relative;top:-50px; left:25px">
+        <div class="col-md-6 col-xs-4" >
+            <!-- <div class="social-icons sicon-white"><a href="#" class="sicon-search" id="frontpageSearchIcon" ><i>search</i></a> -->
+            <form class="form-search" id="frontpageSearch" ONSUBMIT="if (this.submitted) {return true;} else {return false;}">
+                <input class="input-lg inputBox" id="appendedInputButton" style="color:black; width:250px" type="text" placeholder="Search Artist">
+                <button class="btn btn-primary sicon-search sicon-white" type="button" id="frontpageButton"><i>Search</i></button>
+            </form>             
+            
         </div>
     </div>
     <!-- END PAGE | Welcome -->

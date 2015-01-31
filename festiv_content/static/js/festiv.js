@@ -119,7 +119,7 @@ window.onload = function() {
     var searchButton = document.getElementById('frontpageButton'); 
     searchButton.onclick = function search(e) { 
         e.preventDefault(); 
-        var searchedDJs = document.getElementsByClassName('input-xlarge');
+        var searchedDJs = document.getElementsByClassName('input-lg');
         var searchedDJ = searchedDJs[0];
         playTrack(searchedDJ.value);
     }

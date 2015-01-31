@@ -21,6 +21,7 @@
 }
 
 #target { 
+    margin-top: 100px;
     opacity: .8;
 }
 
@@ -30,14 +31,14 @@
 }
 
 #frontpageSearchIcon:hover { 
-    opacity:0;
+    opacity:1;
 }
 
 #frontpageSearch { 
-    position: absolute;
-    float:left;
-    left:37%;
-    opacity: 0;
+    /*position: absolute;*/
+    /*float:left;*/
+    /*left:37%;*/
+    opacity: .8;
     transition: all 0.5s ease-in-out;
     height: 50px;
 }
