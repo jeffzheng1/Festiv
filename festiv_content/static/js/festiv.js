@@ -51,7 +51,7 @@ function myEmbed(url) {
         $("iFrame").remove();
         $('#target').append(data.html);
         $("iFrame").addClass("embed-responsive-item");
-        $("iFrame").attr("width", "60%");
+        $("iFrame").attr("width", "90%");
         $("iFrame").attr("height", "50%");
     });  
 }
