@@ -46,11 +46,11 @@ function getJSONP(url, success) {
 }
 
 function myEmbed(url) { 
-    spinner.stop();
     var query = "https://soundcloud.com/oembed?url=" + url + "&format=js&callback=?&maxheight=500&maxwidth=600&auto_play=true";
     getJSONP(query, function(data){
         // $("#loadingMessage").remove();
         $("iFrame").remove();
+        spinner.stop();
         $('#target').append(data.html);
         // console.log("hit loading");
         $("iFrame").addClass("embed-responsive-item");

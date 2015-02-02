@@ -14,7 +14,6 @@ $(document).ready(function(){
         pageHeight = $(window).height();
     });
     
-    
     /**
     *   ON LOAD
     */
@@ -46,16 +45,16 @@ $(document).ready(function(){
         }
     });
     
-    /* Scroll spy and scroll filter */
-    $('#main-menu').onePageNav({
-        currentClass: "active",
-        changeHash: false,
-        scrollOffset: navigationHeight - 10,
-        scrollThreshold: 0.5,
-        scrollSpeed: 750,
-        filter: "",
-        easing: "swing"
-     });
+    // /* Scroll spy and scroll filter */
+    // $('#main-menu').onePageNav({
+    //     currentClass: "active",
+    //     changeHash: false,
+    //     scrollOffset: navigationHeight - 10,
+    //     scrollThreshold: 0.5,
+    //     scrollSpeed: 750,
+    //     filter: "",
+    //     easing: "swing"
+    //  });
     
     /* 
     *  Paralax initialization.
@@ -65,7 +64,6 @@ $(document).ready(function(){
         /* Dont user paralax for tablet and mobile devices. */
         $('#page-welcome').parallax("0%", 0.2);
         $('#page-features').parallax("0%", 0.07);
-        $('#page-twitter').parallax("0%", 0.1);
     }
     
     /* Emulate touch on table/mobile touchstart. */
@@ -97,18 +95,18 @@ $(document).ready(function(){
     *   Main menu links
     *   Logo click on Welcome page
     */
-    $('#page-welcome .logo a').click(function(){
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top - navigationHeight + 4
-        }, 800);
+    // $('#page-welcome .logo a').click(function(){
+    //     $('html, body').animate({
+    //         scrollTop: $( $.attr(this, 'href') ).offset().top - navigationHeight + 4
+    //     }, 800);
         
-        /* Fix jumping of navigation. */
-        setTimeout(function() {
-            $(window).trigger('scroll');
-        }, 900);
+    //     /* Fix jumping of navigation. */
+    //     setTimeout(function() {
+    //         $(window).trigger('scroll');
+    //     }, 900);
         
-        return false;
-    });
+    //     return false;
+    // });
     
     /**
     *   PAGE | Welcome 
@@ -171,16 +169,6 @@ $(document).ready(function(){
     *   Pull latest tweets from user.
     *   Configuration: /plugins/twitter/index.php
     */
-    $('#twitterfeed-slider').tweet({
-        modpath: 'plugins/twitter/',
-        username: 'TheGridelicious',
-        count: 3
-    });
-    
-    $('#twitterfeed-slider').tweetCarousel({
-        interval: 7000,
-        pause: "hover"
-    });
 });
 
 
@@ -189,34 +177,34 @@ $(document).ready(function(){
 *   Start loading.
 *   Append loading notification.
 */
-$( document ).ajaxSend( function() {
-    /* Show loader. */
-    if($(".loading").length == 0) {
-        $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
-        $(".loading").slideDown();
-        $(".loading .progress .bar").delay(300).css("width", "100%");
-    }
-});
+// $( document ).ajaxSend( function() {
+//     /* Show loader. */
+//     if($(".loading").length == 0) {
+//         $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
+//         $(".loading").slideDown();
+//         $(".loading .progress .bar").delay(300).css("width", "100%");
+//     }
+// });
 
 /**
 *   Reinitialize Scrollspy after ajax request is completed.
 *   Refreshing will recalculate positions of each page in document.
 *   Time delay is added to allow ajax loaded content to expand and change height of page.
 */
-$( document ).ajaxComplete(function() {
-    /* Remove loading section. */
-    $(".loading").delay(1000).slideUp(500, function(){
-        $(this).remove();
-    });
+// $( document ).ajaxComplete(function() {
+//     /* Remove loading section. */
+//     $(".loading").delay(1000).slideUp(500, function(){
+//         $(this).remove();
+//     });
     
-    /* Portfolio details - close. */
-    $(".close-portfolio span").click(function(e) {
-        $(".portfolio-item-details").delay(500).slideUp(500, function(){
-            $(this).remove();
-        });
+//     /* Portfolio details - close. */
+//     $(".close-portfolio span").click(function(e) {
+//         $(".portfolio-item-details").delay(500).slideUp(500, function(){
+//             $(this).remove();
+//         });
         
-        window.location.hash= "!";
-        return false;
-    });
-});
+//         window.location.hash= "!";
+//         return false;
+//     });
+// });
 
