@@ -67,26 +67,26 @@ $(document).ready(function(){
     }
     
     /* Emulate touch on table/mobile touchstart. */
-    if(typeof(window.ontouchstart) != 'undefined') {
-        var touchElements = [".social-icons a", ".portfolio-items li", ".about-items .item"];
+    // if(typeof(window.ontouchstart) != 'undefined') {
+    //     var touchElements = [".social-icons a", ".portfolio-items li", ".about-items .item"];
         
-        $.each(touchElements, function (i, val) {
-            $(val).each(function(i, obj) {
-                $(obj).bind('click', function(e){
+    //     $.each(touchElements, function (i, val) {
+    //         $(val).each(function(i, obj) {
+    //             $(obj).bind('click', function(e){
                 
-                    if($(this).hasClass('clickInNext')){
-                        $(this).removeClass('clickInNext');
-                    } else {
-                        e.preventDefault();
-                        e.stopPropagation();
+    //                 if($(this).hasClass('clickInNext')){
+    //                     $(this).removeClass('clickInNext');
+    //                 } else {
+    //                     e.preventDefault();
+    //                     e.stopPropagation();
                         
-                        $(this).mouseover();
-                        $(this).addClass('clickInNext');
-                    }
-                });
-            });
-        });
-    }
+    //                     $(this).mouseover();
+    //                     $(this).addClass('clickInNext');
+    //                 }
+    //             });
+    //         });
+    //     });
+    // }
 
     /**
     *   BLOCK | Navigation
@@ -177,34 +177,34 @@ $(document).ready(function(){
 *   Start loading.
 *   Append loading notification.
 */
-// $( document ).ajaxSend( function() {
-//     /* Show loader. */
-//     if($(".loading").length == 0) {
-//         $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
-//         $(".loading").slideDown();
-//         $(".loading .progress .bar").delay(300).css("width", "100%");
-//     }
-// });
+$( document ).ajaxSend( function() {
+    /* Show loader. */
+    if($(".loading").length == 0) {
+        $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
+        $(".loading").slideDown();
+        $(".loading .progress .bar").delay(300).css("width", "100%");
+    }
+});
 
 /**
 *   Reinitialize Scrollspy after ajax request is completed.
 *   Refreshing will recalculate positions of each page in document.
 *   Time delay is added to allow ajax loaded content to expand and change height of page.
 */
-// $( document ).ajaxComplete(function() {
-//     /* Remove loading section. */
-//     $(".loading").delay(1000).slideUp(500, function(){
-//         $(this).remove();
-//     });
+$( document ).ajaxComplete(function() {
+    /* Remove loading section. */
+    $(".loading").delay(1000).slideUp(500, function(){
+        $(this).remove();
+    });
     
-//     /* Portfolio details - close. */
-//     $(".close-portfolio span").click(function(e) {
-//         $(".portfolio-item-details").delay(500).slideUp(500, function(){
-//             $(this).remove();
-//         });
+    /* Portfolio details - close. */
+    $(".close-portfolio span").click(function(e) {
+        $(".portfolio-item-details").delay(500).slideUp(500, function(){
+            $(this).remove();
+        });
         
-//         window.location.hash= "!";
-//         return false;
-//     });
-// });
+        window.location.hash= "!";
+        return false;
+    });
+});
 
