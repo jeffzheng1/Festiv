@@ -77,12 +77,11 @@
 .playProfile { 
     margin-right: 10px;
 }
+
 .inputBox { 
     border-radius: 25px !important;
-   
 }
 
-html, body {
-  width: auto !important;
-  overflow-x: hidden !important;
+html, body { 
+    overflow-x:hidden;
 }

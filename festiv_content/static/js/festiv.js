@@ -1,4 +1,4 @@
-var nextArtist, previousArtist;
+var nextArtist, previousArtist, spinner;
 
 var mainArtists = new Array("Hardwell", "Avicii", "'Nicky Romero'", "'David Guetta'", "W&W", "Inpetto", "'Swedish House Mafia'", "Deorro",
     "Carnage", "'Martin Garrix'", "BlasterJaxx", "Kaskade", "Dada Life", "Flosstradamus", "Krewella", "Tiesto","'Gents & Jawns'", "'Mat Zo'", "'Steve Aoki'", 
@@ -46,17 +46,29 @@ function getJSONP(url, success) {
 }
 
 function myEmbed(url) { 
+    spinner.stop();
     var query = "https://soundcloud.com/oembed?url=" + url + "&format=js&callback=?&maxheight=500&maxwidth=600&auto_play=true";
     getJSONP(query, function(data){
+        // $("#loadingMessage").remove();
         $("iFrame").remove();
         $('#target').append(data.html);
+        // console.log("hit loading");
         $("iFrame").addClass("embed-responsive-item");
-        $("iFrame").attr("width", "90%");
+        $("iFrame").attr("width", "100%");
         $("iFrame").attr("height", "50%");
     });  
 }
 
 function playTrack(artist) { 
+    if (spinner == null) {
+        var opts = {top: '85%', // Top position relative to parent
+                    left: '50%' // Left position relative to parent
+                    };
+        spinner = new Spinner(opts).spin();
+    } else { 
+        spinner.spin();
+    }
+    $('#target').append(spinner.el);
     SC.get('/tracks', { 
         q: artist, 
         duration: { 
