@@ -68,7 +68,7 @@ function myEmbed(url) {
 
 function playTrack(artist) { 
     if (spinner == null) {
-        var opts = {top: '110%', // Top position relative to parent
+        var opts = {top: '140%', // Top position relative to parent
                     left: '50%' // Left position relative to parent
                     };
         spinner = new Spinner(opts).spin();
@@ -99,15 +99,22 @@ function playTrack(artist) {
     }); 
 }
 
-function playArtists(genreArtists) { 
+function animateHome() { 
     if (first) {
         $('#leftName').addClass('animated fadeIn');
         $('#welcome-messages').addClass('animated fadeOut');
+        $( "#welcome-messages" ).animate({
+            bottom: 90
+        });
         $( "#myCarousel" ).animate({
-            bottom: 75
+            bottom: 90
         });
         first = false;
     }
+}
+
+function playArtists(genreArtists) { 
+    animateHome();
     var random = Math.floor(Math.random() * genreArtists.length);
     nextArtist = genreArtists[random];
     while (contains(playedArtists, nextArtist)) { 
@@ -160,6 +167,7 @@ window.onload = function() {
         e.preventDefault(); 
         var searchedDJs = document.getElementsByClassName('input-lg');
         var searchedDJ = searchedDJs[0];
+        animateHome();
         playTrack(searchedDJ.value);
         resetLabels();
     }
@@ -168,6 +176,7 @@ window.onload = function() {
     featuredButton.onclick = function(e) { 
         e.preventDefault(); 
         myEmbed("https://soundcloud.com/kaskade/live-at-marquee-las-vegas");
+        animateHome();
         resetLabels();
     }
 }
