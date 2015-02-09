@@ -19,6 +19,8 @@ var tranceArtists = new Array("Armin van Buuren", "Aly & Fila", "Audien", "Marcu
 
 var playedArtists = new Array(); 
 
+var first = true;
+
 function contains(array, obj) {
     var index = array.length;
     if (index > 15) {
@@ -30,6 +32,13 @@ function contains(array, obj) {
        }
     }
     return false;
+}
+
+function resetOthers() { 
+    $('#mainstage').attr("data-hover", "Play Set");
+    $('#tranceStage').attr("data-hover", "Play Set");
+    $('#chillwaveStage').attr("data-hover", "Play Set");
+    $('#trapStage').attr("data-hover", "Play Set");
 }
 
 function getJSONP(url, success) {
@@ -48,20 +57,18 @@ function getJSONP(url, success) {
 function myEmbed(url) { 
     var query = "https://soundcloud.com/oembed?url=" + url + "&format=js&callback=?&maxheight=500&maxwidth=600&auto_play=true";
     getJSONP(query, function(data){
-        // $("#loadingMessage").remove();
         $("iFrame").remove();
         spinner.stop();
         $('#target').append(data.html);
-        // console.log("hit loading");
         $("iFrame").addClass("embed-responsive-item");
-        $("iFrame").attr("width", "100%");
-        $("iFrame").attr("height", "50%");
+        $("iFrame").attr("width", "75%");
+        $("iFrame").attr("height", "100%");
     });  
 }
 
 function playTrack(artist) { 
     if (spinner == null) {
-        var opts = {top: '85%', // Top position relative to parent
+        var opts = {top: '110%', // Top position relative to parent
                     left: '50%' // Left position relative to parent
                     };
         spinner = new Spinner(opts).spin();
@@ -76,11 +83,11 @@ function playTrack(artist) {
         }
     }, function(tracks) { 
         var random = Math.floor(Math.random() * tracks.length); 
-        if (tracks.length == 0) { 
-            var random = Math.floor(Math.random() * (mainArtists.length)); 
+        if (tracks.length == 0) {  
             var anchors = document.getElementsByClassName('mainstage');
             nextArtist = mainArtists[random];
             while (previousArtist == nextArtist) { 
+                random = Math.floor(Math.random() * (mainArtists.length)); 
                 nextArtist = mainArtists[random];
             }
             playTrack(nextArtist);
@@ -93,10 +100,19 @@ function playTrack(artist) {
 }
 
 function playArtists(genreArtists) { 
+    if (first) {
+        $('#leftName').addClass('animated fadeIn');
+        $('#welcome-messages').addClass('animated fadeOut');
+        $( "#myCarousel" ).animate({
+            bottom: 75
+        });
+        first = false;
+    }
     var random = Math.floor(Math.random() * genreArtists.length);
     nextArtist = genreArtists[random];
     while (contains(playedArtists, nextArtist)) { 
-        nextArtist = trapArtists[random];
+        random = Math.floor(Math.random() * genreArtists.length);
+        nextArtist = genreArtists[random];
     }
     playTrack(nextArtist);
     playedArtists.push(nextArtist);
@@ -111,24 +127,32 @@ window.onload = function() {
     mainstageButton.onclick = function(e) { 
         e.preventDefault(); 
         playArtists(mainArtists);
+        resetOthers();
+        $('#mainstage').attr("data-hover", "Next Set");
     }
 
     var tranceStageButton = document.getElementById('tranceStage');
     tranceStageButton.onclick = function(e) { 
         e.preventDefault();
-        playArtists(trapArtists);
+        playArtists(tranceArtists);
+        resetOthers();
+        $('#tranceStage').attr("data-hover", "Next Set");
     }
 
     var chillwaveStageButton = document.getElementById('chillwaveStage');
     chillwaveStageButton.onclick = function(e) { 
         e.preventDefault();
         playArtists(chillwaveArtists);
+        resetOthers();
+        $('#chillwaveStage').attr("data-hover", "Next Set");
     }
 
     var trapStageButton = document.getElementById('trapStage');
     trapStageButton.onclick = function(e) { 
         e.preventDefault();
         playArtists(trapArtists);
+        resetOthers();
+        $('#trapStage').attr("data-hover", "Next Set");
     }
     
     var searchButton = document.getElementById('frontpageButton'); 

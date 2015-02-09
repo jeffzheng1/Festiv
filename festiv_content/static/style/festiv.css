@@ -12,12 +12,14 @@
 }
 
 .stage { 
+    font-family: 'ChunkFiveRegular';
     color: #ffffff;
+    font-size: 40px;
 }
 
 .stage:hover { 
-    color: #3366FF;
-    text-decoration: none;
+    color: #fff;
+    text-decoration: underline;
 }
 
 #target { 
@@ -84,4 +86,10 @@
 
 html, body { 
     overflow-x:hidden;
+}
+
+.search { 
+    -moz-animation-delay: 1.4s;
+    -webkit-animation-delay: 1.4s;
+    -o-animation-delay: 1.4s;
 }
