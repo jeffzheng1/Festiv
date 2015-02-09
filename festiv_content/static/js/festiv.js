@@ -34,7 +34,7 @@ function contains(array, obj) {
     return false;
 }
 
-function resetOthers() { 
+function resetLabels() { 
     $('#mainstage').attr("data-hover", "Play Set");
     $('#tranceStage').attr("data-hover", "Play Set");
     $('#chillwaveStage').attr("data-hover", "Play Set");
@@ -127,7 +127,7 @@ window.onload = function() {
     mainstageButton.onclick = function(e) { 
         e.preventDefault(); 
         playArtists(mainArtists);
-        resetOthers();
+        resetLabels();
         $('#mainstage').attr("data-hover", "Next Set");
     }
 
@@ -135,7 +135,7 @@ window.onload = function() {
     tranceStageButton.onclick = function(e) { 
         e.preventDefault();
         playArtists(tranceArtists);
-        resetOthers();
+        resetLabels();
         $('#tranceStage').attr("data-hover", "Next Set");
     }
 
@@ -143,7 +143,7 @@ window.onload = function() {
     chillwaveStageButton.onclick = function(e) { 
         e.preventDefault();
         playArtists(chillwaveArtists);
-        resetOthers();
+        resetLabels();
         $('#chillwaveStage').attr("data-hover", "Next Set");
     }
 
@@ -151,7 +151,7 @@ window.onload = function() {
     trapStageButton.onclick = function(e) { 
         e.preventDefault();
         playArtists(trapArtists);
-        resetOthers();
+        resetLabels();
         $('#trapStage').attr("data-hover", "Next Set");
     }
     
@@ -161,11 +161,13 @@ window.onload = function() {
         var searchedDJs = document.getElementsByClassName('input-lg');
         var searchedDJ = searchedDJs[0];
         playTrack(searchedDJ.value);
+        resetLabels();
     }
 
     var featuredButton = document.getElementById('featuredSet'); 
     featuredButton.onclick = function(e) { 
         e.preventDefault(); 
         myEmbed("https://soundcloud.com/kaskade/live-at-marquee-las-vegas");
+        resetLabels();
     }
 }
