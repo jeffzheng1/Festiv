@@ -26,19 +26,11 @@
 </head>
 <body>
     <!-- NAVIGATION -->
-    
+    <nav class="fixed-top" id="navigation" style="top: -37px; opacity: 0;">
+    </nav>
     <!-- PAGE | WELCOME -->
     <div class="pages white paralax page-welcome" id="page-welcome">
-    <!--<div class="main">
-            <ul id="cbp-bislideshow" class="cbp-bislideshow">
-                <li><img src="images/ultra2.png" alt="image01"/></li>
-                <li><img src="images/stereosonic1.png" alt="image02"/></li>
-                <li><img src="images/edc1.png" alt="image03"/></li>
-                <li><img src="images/beyondwonderland1.png" alt="image04"/></li>
-                <li><img src="images/tm1.png" alt="image05"/></li>
-                <li><img src="images/creamfields1.png" alt="image06"/></li>
-            </ul> 
-        <div class="overlay"></div> -->
+        <div class="overlay"></div> 
         <!-- Centralized content -->
         <div class="centralized">
             <div class="container" style="height: 100%;">
@@ -220,10 +212,10 @@
                         </a>
                     </li>
                     <li class="span4 mix trance electro">
-                        <a href="#w&w" data-destination="portfolio-items" data-insert="before">
-                            <img src="{% static 'images/pages/lineup/w&w_prof.jpg' %}" alt="Treble">
+                        <a href="#w&amp;w" data-destination="portfolio-items" data-insert="before">
+                            <img src="{% static 'images/pages/lineup/w&amp;w_prof.jpg' %}" alt="Treble">
                             <div class="portfolio-overlay">
-                                <h4>W & W</h4>
+                                <h4>W &amp; W</h4>
                             </div>
                         </a>
                     </li>
@@ -252,105 +244,8 @@
     </div>
     <!-- END PAGE | WORK -->
     
-    <!-- PAGE | FEATURES  -->
-    <div class="pages white paralax page-features" id="page-features">
-        <div class="overlay"></div>
-        <div class="container">
-             <!-- Header -->
-            <header>
-                <h4 class="line-divider" id="festHead">Festivals & Concerts</h4>                
-                
-                <div class="row">
-                    <div class="span8 offset2">
-                        <p>
-                            The biggest music festivals of 2014. 
-                        </p>
-                        <ul id="results">
-            
-                        </ul>
-                    </div>
-                </div>
-            </header>
-             <!-- End Header -->
-             
-             <!-- Article -->
-             <article>
-                <!-- Blog articles -->
-                <ul class="thumbnails text-center">
-                    <!-- Blog post -->
-                    <li class="span4">
-                        <a target="_blank" href="http://www.coachella.com/">
-                            <img class="festPics" src="{% static 'images/pages/festivals/coachella_pic.jpg' %}">
-                        </a>
-                        <h5>
-                            <a style="color:white" target="_blank" href="http://www.coachella.com/">Coachella</a><br/>
-                            <small>April 11 - 13 & April 18 - 20</small>
-                        </h5>
-                        <p class="smallFontBy08">Coachella is a two-weekend, three-day music and arts festival held at the Empire Polo Club in Indio, California.</p>
-                    </li>
-                    <li class="span4">
-                        <a target="_blank" href="http://www.tomorrowland.com/global-sale/">
-                            <img class="festPics" src="{% static 'images/pages/festivals/tomorrowland_pic.jpg' %}">
-                        </a>
-                        <h5>
-                            <a style="color:white" target="_blank" href="http://www.tomorrowland.com/global-sale/">Tomorrowland</a><br/>
-                            <small>July 18 - 20 & July 25 - 27</small>
-                        </h5>
-                        <p class="smallFontBy08">Tomorrowland is a large electronic music festival held in Belgium.</p>
-                    </li>
-                    <li class="span4">
-                        <a target="_blank" href="http://www.creamfields.com/">
-                            <img class="festPics" src="{% static 'images/pages/festivals/creamsfield_pic.jpg' %}">
-                        </a>
-                        <h5>
-                             <a style="color:white" target="_blank" href="http://www.creamfields.com/">Creamsfields</a><br/>
-                            <small>August 22 - 24</small>
-                        </h5>
-                        <p class="smallFontBy08">Creamfields is a large British dance music festival featuring DJs and live acts in Daresbury, England.</p>
-                    </li>
-                    <li class="span4">
-                        <a target="_blank" href="http://stereosonic.com.au">
-                            <img class="festPics" src="{% static 'images/pages/festivals/stereosonic_pic.jpg' %}">
-                        </a>
-                        <h5>
-                             <a style="color:white" target="_blank" href="http://stereosonic.com.au/">Stereosonic</a><br/>
-                            <small>November 29 - 30 & December 5 -7</small>
-                        </h5>
-                        <p class="smallFontBy08">Stereosonic is an annual music festival held in Australia in November and early December. Stereosonic is held in Brisbane, Adelaide, Perth, Sydney, and Melbourne.</p>
-                    </li>
-                    <li class="span4">
-                        <a target="_blank" href="http://www.ultramusicfestival.com/home">
-                            <img class="festPics" src="{% static 'images/pages/festivals/ultra_pic.jpg' %}">
-                        </a>
-                        <h5>
-                            <a style="color:white" target="_blank" href="http://www.ultramusicfestival.com/home">Ultra Music Festival Miami</a><br/>
-                            <small>March 28 - 31</small>
-                        </h5>
-                        <p class="smallFontBy08">Ultra Music Festival (UMF) is an annual outdoor electronic music festival that occurs in March in the city of Miami, Florida, United States.</p>
-                    </li>
-                    <li class="span4">
-                        <a target="_blank" href="http://www.electricdaisycarnival.com/">
-                            <img class="festPics" src="{% static 'images/pages/festivals/edc_pic.jpg' %}">
-                        </a>
-                        <h5>
-                            <a target="_blank" style="color:white" href="http://www.electricdaisycarnival.com/">EDC Las Vegas</a><br/>
-                            <small>June 20 - 22</small>
-                        </h5>
-                        <p class="smallFontBy08">Electric Daisy Carnival in Las Vegas is the world's largest electronic music festival.</p>
-                    </li>
-                </ul>
-            </article>
-            <!-- End Article -->
-        </div>
-    </div>
-    <!-- END PAGE | FEATURES -->
-    
-    <!-- PAGE | CONTACT -->
-    
-    
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
-    
     
     <!-- TWITTER BOOTSTRAP -->
     <script src="{% static 'js/bootstrap/bootstrap.min.js' %}" type="text/javascript"></script>
@@ -360,9 +255,8 @@
     
     <!-- festivScript -->
     <script src = "https://connect.soundcloud.com/sdk.js"></script>
-    <script src="{% static 'js/spin.js' %}"></script>
+    
     <script src = "{% static 'js/festiv.js' %}" type="text/javascript"></script>
-
     
     <!-- PLUGINS -->
     <script src="{% static 'js/plugins/jquery.bxslider.min.js' %}" type="text/javascript"></script>
@@ -373,15 +267,9 @@
     <script src="{% static 'js/plugins/jquery.nav.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/plugins/jquery.parallax-1.1.3.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/plugins/jquery.responsivevideos.min.js' %}" type="text/javascript"></script>
-    
-    
-    
-   
+    <script src="{% static 'js/plugins/jquery.scrollTo.min.js' %}" type="text/javascript"></script>
     
     <!-- INITIALIZE -->
     <script src="{% static 'js/application/source/application.js' %}" type="text/javascript"></script>
-    
-    
-    <!-- GOOGLE ANALYTICS -->
 </body>
 </html>
