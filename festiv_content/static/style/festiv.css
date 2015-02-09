@@ -1,12 +1,3 @@
-.playbutton{ 
-    margin-bottom: 25px;
-    opacity: .5;
-}
-
-.playbutton:hover { 
-    opacity: .75;
-}
-
 #menu-logo { 
     font-family: 'Fauna One', serif;
 }
@@ -34,20 +25,6 @@
 
 #frontpageSearchIcon:hover { 
     opacity:1;
-}
-
-#frontpageSearch { 
-    /*position: absolute;*/
-    /*float:left;*/
-    /*left:37%;*/
-    opacity: .8;
-    transition: all 0.5s ease-in-out;
-    height: 50px;
-}
-
-#frontpageSearch:hover { 
-    opacity:1;
-    transition: all 0.5s ease-in-out;
 }
 
 #festHead { 
@@ -88,7 +65,7 @@ html, body {
     overflow-x:hidden;
 }
 
-.search { 
+.fade { 
     -moz-animation-delay: 1.4s;
     -webkit-animation-delay: 1.4s;
     -o-animation-delay: 1.4s;

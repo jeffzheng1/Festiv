@@ -54,21 +54,33 @@ function getJSONP(url, success) {
     head.appendChild(script);
 }
 
+var everyOther = 0;
+
 function myEmbed(url) { 
     var query = "https://soundcloud.com/oembed?url=" + url + "&format=js&callback=?&maxheight=500&maxwidth=600&auto_play=true";
     getJSONP(query, function(data){
-        $("iFrame").remove();
+        if (everyOther == 2) {
+            $(".remove").remove();
+            $("iFrame").addClass("remove");
+            everyOther = 1;
+        }
         spinner.stop();
         $('#target').append(data.html);
-        $("iFrame").addClass("embed-responsive-item");
-        $("iFrame").attr("width", "75%");
+        if (everyOther != 2) {
+            if (everyOther == 0) { 
+                $("iFrame").addClass("remove");
+            }
+            everyOther += 1;
+        }
+        $("iFrame").attr("width", "45%");
         $("iFrame").attr("height", "100%");
+        $("iFrame").css("margin-right", "10px");
     });  
 }
 
 function playTrack(artist) { 
     if (spinner == null) {
-        var opts = {top: '140%', // Top position relative to parent
+        var opts = {top: '60%', // Top position relative to parent
                     left: '50%' // Left position relative to parent
                     };
         spinner = new Spinner(opts).spin();
