@@ -24,7 +24,7 @@ var first = true;
 function contains(array, obj) {
     var index = array.length;
     if (index > 15) {
-        a.shift(); 
+        array.shift(); 
     }
     while (index--) {
        if (array[index] === obj) {
