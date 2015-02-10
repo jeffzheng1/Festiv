@@ -60,15 +60,19 @@ function myEmbed(url) {
     var query = "https://soundcloud.com/oembed?url=" + url + "&format=js&callback=?&maxheight=500&maxwidth=600&auto_play=true";
     getJSONP(query, function(data){
         if (everyOther == 2) {
+            // $(".animate").addClass("animated fadeOutLeft");
             $(".remove").remove();
             $("iFrame").addClass("remove");
             everyOther = 1;
         }
         spinner.stop();
         $('#target').append(data.html);
+        $("iFrame").addClass("animated bounceInRight");
         if (everyOther != 2) {
             if (everyOther == 0) { 
                 $("iFrame").addClass("remove");
+            } else { 
+                $("iFrame").addClass("animate");
             }
             everyOther += 1;
         }
