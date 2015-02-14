@@ -6332,7 +6332,6 @@ a.badge:focus {
 }
 .carousel {
   position: relative;
-  margin-bottom: 27px;
 }
 .carousel-inner {
   overflow: hidden;

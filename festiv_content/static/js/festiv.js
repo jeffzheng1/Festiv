@@ -120,10 +120,10 @@ function animateHome() {
         $('#leftName').addClass('animated fadeIn');
         $('#welcome-messages').addClass('animated fadeOut');
         $( "#welcome-messages" ).animate({
-            bottom: 90
+            bottom: 160
         });
         $( "#myCarousel" ).animate({
-            bottom: 90
+            bottom: 160
         });
         first = false;
     }
